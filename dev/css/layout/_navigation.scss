@@ -1,0 +1,39 @@
+.nav-bar{
+  display: flex;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  justify-content: center;
+  border-top: 5px solid red;
+    .logo-nav{
+    display: block;
+    width: 20%;
+  }
+  .menu-main {
+    width: 60%;
+    ul{
+    list-style: none;
+    display: flex;
+    justify-content: center
+    }
+    li{
+      padding-left: 5%;
+    }
+    a{
+      color: white;
+      font-size: 0.9rem;
+    }
+  }
+  .socials{
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    a{
+      padding-right: 10%;
+      i{
+    color: white;
+    }
+    }
+  }
+}

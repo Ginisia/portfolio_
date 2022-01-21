@@ -1,3 +1,36 @@
+.header{
+  width: 100%;
+  height: 50%;
+  background: black;
+    color: white;
+}
 h1{
-  color:aquamarine;
+  font-family: 'Courgette', cursive;
+  color: white;
+  font-size: 4rem;
+  margin: 0;
+}
+h2{
+  text-transform: uppercase;
+  font-size: 4rem;
+  margin: 0;
+}
+
+.welcome-head{
+  padding: 10% 0;
+  .slide-top{
+    background-image: url(../img/slide1-01.jpg)center/cover;
+    width: 100%;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    z-index: 3;
+  }
+  .moving-title{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
