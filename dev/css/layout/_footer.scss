@@ -1,0 +1,23 @@
+.footer {
+  position: absolute;
+  left: 4%;
+  right: 4%;
+  bottom: 25px;
+  display: flex;
+  align-items: center;
+  @media screen and (max-width:990px){
+    display: none;
+  }
+  .nav-footer{
+    margin-right: auto;
+    white-space: nowrap;
+    a{
+      margin-right: 4%;
+      font-size: 13px;
+    }
+  }
+small {
+  color: #5A5A58;
+  font-style: italic;
+}
+}

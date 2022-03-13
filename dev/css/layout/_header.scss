@@ -1,36 +1,109 @@
-.header{
-  width: 100%;
-  height: 50%;
+
+
+.window-contact{
+  position: fixed;
+  width: 50%;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  height: 100vh;
   background: black;
-    color: white;
-}
-h1{
-  font-family: 'Courgette', cursive;
-  color: white;
-  font-size: 4rem;
-  margin: 0;
-}
-h2{
-  text-transform: uppercase;
-  font-size: 4rem;
-  margin: 0;
+  padding: 20px;
+  transform: translateX(100%);
+  transition: .3s all ease-in-out;
+  &.active{
+    transform: translateX(0);
+  }
+  
+  
+  .wrapperform{
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 5% ;
+    .contain-form {
+      display: flex;
+      flex-direction: column;
+      .btn-form{
+        display: flex;
+        width: 500px;
+        align-items: center;
+        input{
+        border: 1px solid #fff;
+        width: 250px;
+        border-radius: 2px;
+        background: none;
+        padding: 10px;
+        text-decoration: none;
+        color: #fff;
+        }
+        a{
+          text-align: center;
+          font-size: 12px;
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+      .names{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        width: 510px;
+        input{
+          width: 250px;
+        }
+      }
+      input, textarea{
+        background-color: #212121;
+        border: 0;
+        border-radius: 2px;
+        margin: 10px;
+        padding: 20px;
+        padding-left: 10px;
+        color: #757575;
+        width: 510px;
+        input {
+          height: 50px;
+        }
+        textarea{
+          height: 200px;
+        }
+      }
+    }
+    
+  }
 }
 
-.welcome-head{
-  padding: 10% 0;
-  .slide-top{
-    background-image: url(../img/slide1-01.jpg)center/cover;
-    width: 100%;
-    position: relative;
-    left: 0px;
-    top: 0px;
-    z-index: 3;
-  }
-  .moving-title{
-    width: 100%;
+.title-form{
+  margin-bottom: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .cross-wind {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    .cross-part{
+      width: 60%;
+      height: 1px;
+      background: white;
+      border-radius: 8px;
+      transition: 0.5s all cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      position: absolute;
+    }
+    .cross-part:nth-child(1){
+      transform: rotate(45deg);
+    }
+    .cross-part:nth-child(2){
+      transform: rotate(-45deg);
+    }
   }
 }
+

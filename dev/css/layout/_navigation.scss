@@ -1,39 +1,39 @@
-.nav-bar{
-  display: flex;
-  width: 100%;
-  top: 0;
+.main-nav{
+  z-index: 22;
   position: fixed;
-  justify-content: center;
-  border-top: 5px solid red;
-    .logo-nav{
-    display: block;
-    width: 20%;
+  left: 4%;
+  right: 4%;
+  top: 25px;
+  width: 92%;
+  display: flex;
+  font-size: 13px;
+  letter-spacing: 1px;
+  @media screen and (max-width:990px){
+    left: unset;
+    right: unset;
+    top: 0;
+    width: 100%;
+    display: none;
+    background: #363636;
   }
-  .menu-main {
-    width: 60%;
-    ul{
-    list-style: none;
-    display: flex;
-    justify-content: center
-    }
-    li{
-      padding-left: 5%;
-    }
-    a{
-      color: white;
-      font-size: 0.9rem;
-    }
+  a:nth-of-type(1){
+    font-size: 12px;
+    margin-right: auto;
+    text-transform: capitalize;
   }
-  .socials{
-    width: 20%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    a{
-      padding-right: 10%;
-      i{
-    color: white;
-    }
-    }
+  a+a {
+  margin-left: 4%;
+  }
+  a+a:hover{
+    text-shadow: 0 0 5px #ffffff;
+  }
+  
+  @media screen and (max-width:990px){
+    left: unset;
+    right: unset;
+    top: 0;
+    width: 100%;
+    display: none;
+    background: #363636;
   }
 }

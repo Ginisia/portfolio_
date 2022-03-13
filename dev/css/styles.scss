@@ -1,7 +1,7 @@
 @import "base/reset";
-@import "base/typography";
-
 @import "helpers/variables";
+
+@import "base/typography";
 @import "helpers/mixins";
 
 @import "components/buttons";
@@ -12,3 +12,6 @@
 @import "layout/navigation";
 
 @import "pages/home";
+@import "pages/projects";
+@import "pages/about";
+

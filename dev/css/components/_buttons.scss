@@ -1,0 +1,17 @@
+/*BUTTON*/
+.button {
+  background: transparent;
+  margin: 20px 30px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn_white {
+  border: 1px solid #fff;
+  color: white;
+}

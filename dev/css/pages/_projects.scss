@@ -1,0 +1,51 @@
+
+.projects{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+  .project{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    .cat{
+      text-transform: uppercase;
+    }
+  }
+.project a:before{
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: .3s all ease-in-out;
+}
+
+.project a:hover:before{
+  opacity: 1;
+}
+
+.project:nth-of-type(1) a:hover:before {
+  background-image: url('../img/124200366_3562046243860444_742471001335791819_n.jpeg');
+
+}
+.project:nth-of-type(2) a:hover:before {
+  background-image: url('../img/c8189182d9873e43ff2248006bef5031.jpeg');
+
+}
+.project:nth-of-type(3) a:hover:before {
+  background-image: url('../img/eventoxtra-header.jpeg');
+
+}
+.project:nth-of-type(4) a:hover:before {
+  background-image: url('../img/flako.jpg');
+
+}

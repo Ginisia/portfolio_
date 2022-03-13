@@ -3,50 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.min.css">
     <script src="https://kit.fontawesome.com/193b533ce6.js" crossorigin="anonymous"></script>
-    <title>Pato-Restaurant</title>
+    <link rel="stylesheet" href="css/styles.min.css">
+    <title>Gini Cormerais | Front-end Dev Junior</title>
 </head>
-<body>
-    <header class="header">
-        <nav class="nav-bar">
-            <div class="logo">
-                <a href="#">
-                    <img src="img/logo.png" type="image/png" alt="#" class="logo-nav">
-                </a>
+<body class="page-home">
+    <div class="transition-bg"></div>
+    <header>
+        <nav class="main-nav">
+            <a href="index.html">gini cormerais</a>
+            <a href="projects.html">Projects</a>
+            <a href="about.html">About</a>
+            <a href="#" class="contact-link" id="contact">Contact</a>
+            <div class="window-contact">
+                <div class="wrapperform">
+                    <div class="title-form">
+                            <h2>Hello! Let's work together.</h2>
+                            <div onclick="hasClick()" class="cross-wind">
+                                <span class="cross-part"></span>
+                                <span class="cross-part"></span>
+                            </div>
+                    </div>
+                    <form name="form" method="post" action="">
+                        <div class="contain-form">
+                            <div class="names">
+                                <input type="text" name="firstname" placeholder="First Name">
+                                <input type="text" name="secondname" placeholder="Second Name">
+                            </div>
+                            <div class="infosup">
+                                <input type="text" name="email" placeholder="Email address">
+                                <textarea name="proj-desc" id="" cols="20" rows="5" placeholder="Project description"></textarea>
+                            </div>
+                            <div class="btn-form">
+                                <input type="submit" onclick="verifCode()" value="Send Request"><a href="#">Download Resume</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="menu-main">
-                <ul>
-                    <li><a href="#">home</a></li>
-                    <li><a href="#">menu</a></li>
-                    <li><a href="#">reservation</a></li>
-                    <li><a href="#">gallery</a></li>
-                    <li><a href="#">about</a></li>
-                    <li><a href="#">blog</a></li>
-                    <li><a href="#">contact</a></li>
-                </ul>
-            </div>
-            <div class="socials">
-                <a href=""><i class="fa fa-tripadvisor"></i></a>
-                <a href=""><i class="fab fa-facebook-f"></i></a>
-                <a href=""><i class="fab fa-twitter"></i></a>
-            </div>
-            <div class="bg-menu"></div>
         </nav>
-        <div class="welcome-head">
-            <div class="slide-top"></div>
-            <div class="moving-title">
-                <h1>Welcome to</h1>
-                <h2>pato place</h2>
-            </div>
-        </div>
     </header>
-    <main>
-        
+    <main class="main wrapper">
+        <canvas></canvas>
+        <div class="txt-center">
+            <p>Hi, I'm Gini.</p>
+            <p>A Front End Developper based in Brussels</p>
+            <a href="projects.html"><i class="fas fa-feather-alt"></i> Explore projects</a>
+        </div>
     </main>
-    <footer>
-        
+    <footer class="footer">
+            <nav class="nav-footer">
+                <a href="http://www.instagram.com/" target="_blank">Instagram</a>
+                <a href="http://www.linkedin.com/" target="_blank">Linkedin</a>
+                <a href="">GitHub</a>
+            </nav>
     </footer>
+    <script src="js/main.min.js"></script>
 </body>
-<script src="js/main.min.js"></script>
 </html>
