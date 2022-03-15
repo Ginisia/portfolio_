@@ -17,9 +17,12 @@
     background: #363636;
   }
   a:nth-of-type(1){
-    font-size: 12px;
+    font-size: 18px;
     margin-right: auto;
     text-transform: capitalize;
+    span{
+      font-weight: 200;
+    }
   }
   a+a {
   margin-left: 4%;

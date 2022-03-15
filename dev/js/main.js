@@ -4,7 +4,7 @@ var Birds = function () {
 	var me = this;
 
 	var config = {
-		number: 50,
+		number: 13,
 	};
 
 	var width;
