@@ -6,53 +6,66 @@
   width: 100%;
 }
 .projects .wrapper{
-  margin-top: 15%;
-  max-width: 1200px;
+    padding: 10%;
+    width: 1200px;
+    max-width: 100%;
 }
 
 .project{
-    display: grid;
-    align-items: center;
-    grid-template-columns: 2fr 2fr;
-    margin-bottom: 4rem;
-    justify-items: center;
-    .cat{
-      text-transform: uppercase;
-    }
+  display: grid;
+  align-items: center;
+  grid-template-columns: 2fr 2fr;
+  margin-bottom: 4rem;
+  justify-items: center;
+  .cat{
+    text-transform: uppercase;
   }
+}
 
-.img_linkproj{
-        display: block;
-        margin-right: 1rem;
-        width: 300px;
-        height: 300px;
-        border-radius: 50%;
-        overflow:hidden;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        box-shadow: -10px 0px 20px -10px #ffffff, 20px 0px 13px -7px #ffffff, 10px 5px 15px 5px rgba(250, 249, 249, 0);
-      }
-.project:nth-of-type(1) .img_linkproj:hover{
+.img-container{
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow:hidden;
+  box-shadow: -10px 0px 20px -10px #ffffff, 20px 0px 13px -7px #ffffff, 10px 5px 15px 5px rgba(250, 249, 249, 0);
+  .img-link{
+
+    height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+}
+
+.project:nth-of-type(1) .img-container .img-link{
   background-image: url(../img/travelista.jpg);
+  opacity: 0;
+  &:hover{opacity: 1; transition: all .5s ease-in-out;}
 }
-.project:nth-of-type(2) .img_linkproj:hover{
+.project:nth-of-type(2) .img-container .img-link{
   background-image: url(../img/pato.jpg);
+    opacity: 0;
+  &:hover{opacity: 1; transition: all .5s ease-in-out;}
 }
-.project:nth-of-type(3) .img_linkproj:hover{
-background-image: url(../img/pato.jpg);
+.project:nth-of-type(3) .img-container .img-link{
+  background-image: url(../img/pato.jpg);
+    opacity: 0;
+  &:hover{opacity: 1; transition: all .5s ease-in-out;}
 }
-.project:nth-of-type(4) .img_linkproj:hover{
-background-image: url(../img/marco.jpeg);
+.project:nth-of-type(4) .img-container .img-link{
+  background-image: url(../img/marco.jpeg);
+    opacity: 0;
+  &:hover{opacity: 1; transition: all .5s ease-in-out;}
 }
-.project:nth-of-type(6) .img_linkproj img{
-  width: 0;
-}
-.project:nth-of-type(6) .img_linkproj:hover{
-background: linear-gradient(179deg, #f3d3e9, #dfb7f5, #8cd7b3, #9bb5ea, #f2bda5);
-background-size: 500% 500%;
-
-  -moz-animation: movingGradient 2s ease infinite;
+.project:nth-of-type(6) .img-container .img-link{
+    opacity: 0;
+  &:hover{
+    opacity: 1; 
+    transition: all .5s ease-in-out;}
+    background: linear-gradient(179deg, #f3d3e9, #dfb7f5, #8cd7b3, #9bb5ea, #f2bda5);
+    background-size: 500% 500%;
+    -moz-animation: movingGradient 2s ease infinite;
   -o-animation: movingGradient 2s ease infinite;
   animation: movingGradient 2s ease infinite;
   img{
@@ -62,6 +75,7 @@ background-size: 500% 500%;
     right: -10%;
   }
 }
+
 
 @-moz-keyframes movingGradient {
   0%{background-position:0% 78%}
@@ -77,29 +91,14 @@ background-size: 500% 500%;
   0%{background-position:0% 78%}
   50%{background-position:100% 23%}
   100%{background-position:0% 78%}
-
+  
 }
-.project:nth-of-type(7) .img_linkproj:hover{
-background-image: url(../img/tremont.jpg);
+.project:nth-of-type(7) .img-container .img-link{
+  background-image: url(../img/tremont.jpg);
+    opacity: 0;
+  &:hover{opacity: 1; transition: all .5s ease-in-out;}
 }
 
-// .project:nth-of-type(1) a:hover:before {
-//   background-image: url('../img/124200366_3562046243860444_742471001335791819_n.jpeg');
-
-// }
-// .project:nth-of-type(2) a:hover:before {
-//   background-image: url('../img/c8189182d9873e43ff2248006bef5031.jpeg');
-
-// }
-// .project:nth-of-type(3) a:hover:before {
-//   background-image: url('../img/eventoxtra-header.jpeg');
-
-// }
-// .project:nth-of-type(4) a:hover:before {
-//   background-image: url('../img/flako.jpg');
-
-// }
-
-.project h2:hover{
-  text-shadow: rgb(52, 54, 184) 5px 0 10px;
-}
+        .project h2:hover{
+          text-shadow: rgb(52, 54, 184) 5px 0 10px;
+        }

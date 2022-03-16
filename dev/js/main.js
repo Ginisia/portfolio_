@@ -1,40 +1,37 @@
 ///Moving Birds ////
-var Birds = function () {
-  
-	var me = this;
-
-	var config = {
+let Birds = function () {
+	let config = {
 		number: 13,
 	};
 
-	var width;
-	var height;
+	let width;
+	let height;
 
-	var canvas;
-	var engine;
+	let canvas;
+	let engine;
 
-	var birds;
-	var frame = 0;
+	let birds;
+	let frame = 0;
 
-	var speed = 0.4;
-	var birdLineCount = 10;
-	var birdLineIndex = -1;
+	let speed = 0.4;
+	let birdLineCount = 10;
+	let birdLineIndex = -1;
 
-	var bgTop;
-	var bgBot;
+	let bgTop;
+	let bgBot;
 
-	var z = {
+	let z = {
 		current: 1,
 		target: 1,
 	};
 
-	var mouse = {
+	let mouse = {
 		x: 0.5,
 		y: 0.5,
 		z: 0.5,
 	};
 
-	var prepare = function () {
+	let prepare = function () {
 		canvas = document.getElementsByTagName('canvas')[0];
 		engine = canvas.getContext('2d');
 
@@ -53,11 +50,11 @@ var Birds = function () {
 		bgBot.addColorStop(1, '#001');
 	};
 
-	var request = function () {
+	let request = function () {
 		window.requestAnimationFrame(tick);
 	};
 
-	var solveBirdMove = function (bird) {
+	let solveBirdMove = function (bird) {
 		['x', 'y', 'z'].forEach(function (key) {
 			if (Math.abs(bird.move[key]) > 0.003) {
 				bird.move[key] *= 0.99;
@@ -74,29 +71,29 @@ var Birds = function () {
 		bird.move.z += speed * (mouse.z - bird.pos.z) * bird.speed;
 	};
 
-	var applyPath = function (pathStack) {
+	let applyPath = function (pathStack) {
 		engine.moveTo(pathStack[0].x, pathStack[0].y);
 
-		for (var i = 1; i < pathStack.length; i++) {
+		for (let i = 1; i < pathStack.length; i++) {
 			engine.lineTo(pathStack[i].x, pathStack[i].y);
 		}
 	};
 
-	var drawBird = function (bird) {
+	let drawBird = function (bird) {
 		engine.fillStyle = 'hsl(' + (frame % 360) + ', 100%, 90%)';
 
-		var pos = {
+		let pos = {
 			x: bird.pos.x * width,
 			y: bird.pos.y * height,
 			z: bird.pos.z * 1.5,
 		};
 
-		var size = ((width + height) / 200) * pos.z * z.current;
-		var atan = Math.atan2(bird.move.y * height, bird.move.x * width);
+		let size = ((width + height) / 200) * pos.z * z.current;
+		let atan = Math.atan2(bird.move.y * height, bird.move.x * width);
 
 		engine.lineWidth = 1;
 
-		var p = function (rad, customSize) {
+		let p = function (rad, customSize) {
 			return {
 				x: pos.x + Math.cos(atan + rad * Math.PI * 2) * size * customSize,
 				y: pos.y + Math.sin(atan + rad * Math.PI * 2) * size * customSize,
@@ -133,9 +130,9 @@ var Birds = function () {
 
 		engine.fill();
 
-		var wingWave = Math.sin(bird.wing);
-		var wingAdd = wingWave * 0.1;
-		var wingPositiveWave = (wingWave + 1) / 2;
+		let wingWave = Math.sin(bird.wing);
+		let wingAdd = wingWave * 0.1;
+		let wingPositiveWave = (wingWave + 1) / 2;
 
 		engine.beginPath();
 
@@ -155,13 +152,13 @@ var Birds = function () {
 		engine.fill();
 	};
 
-	var addLinePath = function (bird, pos) {
+	let addLinePath = function (bird, pos) {
 		bird.lines[birdLineIndex * 2] = pos.x;
 		bird.lines[birdLineIndex * 2 + 1] = pos.y;
 	};
 
-	var drawBirdLines = function () {
-		for (var i = birdLineCount; i >= 2; i--) {
+	let drawBirdLines = function () {
+		for (let i = birdLineCount; i >= 2; i--) {
 			engine.beginPath();
 			engine.lineWidth = ((i / birdLineCount) * (width + height)) / 1000;
 			engine.strokeStyle =
@@ -170,10 +167,8 @@ var Birds = function () {
 				', 100%, 50%, ' +
 				i / birdLineCount +
 				')';
-			// engine.strokeStyle = 'hsla(230, 0%, 30%, ' + i / birdLineCount / 2 + ')';
-
-			var currentIndex = (birdLineIndex + i) % birdLineCount;
-			var lastIndex = (birdLineIndex + i + birdLineCount - 1) % birdLineCount;
+			let currentIndex = (birdLineIndex + i) % birdLineCount;
+			let lastIndex = (birdLineIndex + i + birdLineCount - 1) % birdLineCount;
 
 			birds.forEach(function (bird) {
 				if (
@@ -196,27 +191,7 @@ var Birds = function () {
 		}
 	};
 
-	var drawShine = function () {
-		// engine.globalCompositeOperation = 'lighter';
-		// engine.fillStyle = 'hsla(' + (frame % 360) +  ', 100%, 90%, 0.005)';
-		//
-		// birds.forEach(function(bird) {
-		//
-		//     engine.beginPath();
-		//
-		//     engine.moveTo(bird.pos.x * width, bird.pos.y * height);
-		//     engine.arc(
-		//         bird.pos.x * width,
-		//         bird.pos.y * height,
-		//         bird.pos.z * (width + height) / 3,
-		//         0,
-		//         Math.PI * 2
-		//     );
-		//
-		//     engine.fill();
-		//     engine.closePath();
-		// });
-
+	let drawShine = function () {
 		engine.fillStyle = 'hsla(' + (frame % 360) + ', 100%, 90%, 0.01)';
 
 		engine.beginPath();
@@ -237,7 +212,7 @@ var Birds = function () {
 		engine.globalCompositeOperation = 'source-over';
 	};
 
-	var renderBirds = function () {
+	let renderBirds = function () {
 		birds.forEach(function (bird) {
 			solveBirdMove(bird);
 
@@ -259,11 +234,11 @@ var Birds = function () {
 		drawShine();
 	};
 
-	var clear = function () {
+	let clear = function () {
 		engine.clearRect(0, 0, width, height);
 	};
 
-	var drawBg = function () {
+	let drawBg = function () {
 		engine.fillStyle = bgTop;
 		engine.fillRect(0, 0, width, height / 2);
 
@@ -271,7 +246,7 @@ var Birds = function () {
 		engine.fillRect(0, height / 2, width, height);
 	};
 
-	var tick = function () {
+	let tick = function () {
 		frame++;
 
 		z.current += (z.target - z.current) / 100;
@@ -283,10 +258,10 @@ var Birds = function () {
 		request();
 	};
 
-	var createBirds = function () {
+	let createBirds = function () {
 		birds = [];
 
-		for (var i = 0; i < config.number; i++) {
+		for (let i = 0; i < config.number; i++) {
 			birds.push({
 				wing: Math.random(),
 				wingAdd: Math.random(),
@@ -320,11 +295,7 @@ var Birds = function () {
 		}
 	};
 
-	var registerMouse = function () {
-		// document.addEventListener('mousemove', function(e) {
-		//     mouse.x = e.clientX / width;
-		//     mouse.y = e.clientY / height;
-		// });
+	let registerMouse = function () {
 
 		setInterval(function () {
 			mouse.x = Math.random();
@@ -343,15 +314,15 @@ var Birds = function () {
 	};
 };
 
-var b = new Birds();
+let b = new Birds();
 b.run();
 
 ///////////////////////////////////////
 
 ////SIDE BAR////
-var myContact = document.querySelector('.contact-link');
-var contact = document.querySelector('.window-contact');
-var cross = document.querySelector('.cross-wind');
+let myContact = document.querySelector('.contact-link');
+let contact = document.querySelector('.window-contact');
+let cross = document.querySelector('.cross-wind');
 
 myContact.addEventListener('click', function () {
 	contact.classList.toggle('active');
