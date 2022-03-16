@@ -6,43 +6,81 @@
   width: 100%;
 }
 .projects .wrapper{
-  margin-top: 10%;
+  margin-top: 15%;
   max-width: 1200px;
 }
 
 .project{
     display: grid;
-    justify-content: center;
     align-items: center;
     grid-template-columns: 2fr 2fr;
-    gap: 4rem;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
+    justify-items: center;
     .cat{
       text-transform: uppercase;
     }
   }
-.project a:before{
-  content: '';
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
-  transition: .3s all ease-in-out;
+
+.img_linkproj{
+        display: block;
+        margin-right: 1rem;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        overflow:hidden;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        box-shadow: -10px 0px 20px -10px #ffffff, 20px 0px 13px -7px #ffffff, 10px 5px 15px 5px rgba(250, 249, 249, 0);
+      }
+.project:nth-of-type(1) .img_linkproj:hover{
+  background-image: url(../img/travelista.jpg);
+}
+.project:nth-of-type(2) .img_linkproj:hover{
+  background-image: url(../img/pato.jpg);
+}
+.project:nth-of-type(3) .img_linkproj:hover{
+background-image: url(../img/pato.jpg);
+}
+.project:nth-of-type(4) .img_linkproj:hover{
+background-image: url(../img/marco.jpeg);
+}
+.project:nth-of-type(6) .img_linkproj img{
+  width: 0;
+}
+.project:nth-of-type(6) .img_linkproj:hover{
+background: linear-gradient(179deg, #f3d3e9, #dfb7f5, #8cd7b3, #9bb5ea, #f2bda5);
+background-size: 500% 500%;
+
+  -moz-animation: movingGradient 2s ease infinite;
+  -o-animation: movingGradient 2s ease infinite;
+  animation: movingGradient 2s ease infinite;
+  img{
+    width: 80%;
+    position: relative;
+    top: -15%;
+    right: -10%;
+  }
 }
 
-.project a:hover:before{
-  opacity: 1;
+@-moz-keyframes movingGradient {
+  0%{background-position:0% 78%}
+  50%{background-position:100% 23%}
+  100%{background-position:0% 78%}
 }
-.img_linkproj{
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  background: rgb(48, 223, 179);
+@-o-keyframes movingGradient {
+  0%{background-position:0% 78%}
+  50%{background-position:100% 23%}
+  100%{background-position:0% 78%}
+}
+@keyframes movingGradient {
+  0%{background-position:0% 78%}
+  50%{background-position:100% 23%}
+  100%{background-position:0% 78%}
+
+}
+.project:nth-of-type(7) .img_linkproj:hover{
+background-image: url(../img/tremont.jpg);
 }
 
 // .project:nth-of-type(1) a:hover:before {
