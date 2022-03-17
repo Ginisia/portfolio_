@@ -6,9 +6,9 @@
   width: 100%;
 }
 .projects .wrapper{
-    padding: 10%;
-    width: 1200px;
-    max-width: 100%;
+  padding: 10%;
+  width: 1200px;
+  max-width: 100%;
 }
 
 .project{
@@ -17,9 +17,6 @@
   grid-template-columns: 2fr 2fr;
   margin-bottom: 4rem;
   justify-items: center;
-  .cat{
-    text-transform: uppercase;
-  }
 }
 
 .img-container{
@@ -30,11 +27,17 @@
   overflow:hidden;
   box-shadow: -10px 0px 20px -10px #ffffff, 20px 0px 13px -7px #ffffff, 10px 5px 15px 5px rgba(250, 249, 249, 0);
   .img-link{
-
+    
     height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+.project:nth-of-type(2), .project:nth-of-type(4), .project:nth-of-type(6) .txt-pres-proj{
+  text-align: right;
+  .button-link{
+    right: 0;
   }
 }
 
@@ -45,60 +48,65 @@
 }
 .project:nth-of-type(2) .img-container .img-link{
   background-image: url(../img/pato.jpg);
-    opacity: 0;
+  opacity: 0;
   &:hover{opacity: 1; transition: all .5s ease-in-out;}
 }
 .project:nth-of-type(3) .img-container .img-link{
-  background-image: url(../img/pato.jpg);
-    opacity: 0;
-  &:hover{opacity: 1; transition: all .5s ease-in-out;}
-}
-.project:nth-of-type(4) .img-container .img-link{
-  background-image: url(../img/marco.jpeg);
-    opacity: 0;
-  &:hover{opacity: 1; transition: all .5s ease-in-out;}
-}
-.project:nth-of-type(6) .img-container .img-link{
-    opacity: 0;
+  opacity: 0;
   &:hover{
     opacity: 1; 
     transition: all .5s ease-in-out;}
     background: linear-gradient(179deg, #f3d3e9, #dfb7f5, #8cd7b3, #9bb5ea, #f2bda5);
     background-size: 500% 500%;
     -moz-animation: movingGradient 2s ease infinite;
-  -o-animation: movingGradient 2s ease infinite;
-  animation: movingGradient 2s ease infinite;
-  img{
-    width: 80%;
-    position: relative;
-    top: -15%;
-    right: -10%;
+    -o-animation: movingGradient 2s ease infinite;
+    animation: movingGradient 2s ease infinite;
+    img{
+      width: 80%;
+      position: relative;
+      top: -15%;
+      right: -10%;
+    }
   }
-}
-
-
-@-moz-keyframes movingGradient {
-  0%{background-position:0% 78%}
-  50%{background-position:100% 23%}
-  100%{background-position:0% 78%}
-}
-@-o-keyframes movingGradient {
-  0%{background-position:0% 78%}
-  50%{background-position:100% 23%}
-  100%{background-position:0% 78%}
-}
-@keyframes movingGradient {
-  0%{background-position:0% 78%}
-  50%{background-position:100% 23%}
-  100%{background-position:0% 78%}
   
-}
-.project:nth-of-type(7) .img-container .img-link{
-  background-image: url(../img/tremont.jpg);
+  .project:nth-of-type(4) .img-container .img-link{
+    background-image: url(../img/marco.jpeg);
     opacity: 0;
-  &:hover{opacity: 1; transition: all .5s ease-in-out;}
-}
+    &:hover{opacity: 1; transition: all .5s ease-in-out;}
+  }
 
-        .project h2:hover{
-          text-shadow: rgb(52, 54, 184) 5px 0 10px;
-        }
+  .project:nth-of-type(5) .img-container .img-link{
+    background-image: url(../img/tremont.jpg);
+    opacity: 0;
+    &:hover{opacity: 1; transition: all .5s ease-in-out;}
+  }
+  
+  .project:nth-of-type(6) .img-container .img-link{
+    background-image: url(../img/meteo.jpg);
+    opacity: 0;
+    &:hover{opacity: 1; transition: all .5s ease-in-out;}
+  }
+  
+  .project:nth-of-type(7) .img-container .img-link{
+    background-image: url(../img/dino3.jpg);
+    opacity: 0;
+    &:hover{opacity: 1; transition: all .5s ease-in-out;}
+  }
+  
+  ///////////////////KEYFRAMES/////////////////////////////
+  @-moz-keyframes movingGradient {
+    0%{background-position:0% 78%}
+    50%{background-position:100% 23%}
+    100%{background-position:0% 78%}
+  }
+  @-o-keyframes movingGradient {
+    0%{background-position:0% 78%}
+    50%{background-position:100% 23%}
+    100%{background-position:0% 78%}
+  }
+  @keyframes movingGradient {
+    0%{background-position:0% 78%}
+    50%{background-position:100% 23%}
+    100%{background-position:0% 78%}
+    
+  }
