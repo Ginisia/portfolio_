@@ -26,8 +26,8 @@
   border-radius: 50%;
   overflow:hidden;
   box-shadow: -10px 0px 20px -10px #ffffff, 20px 0px 13px -7px #ffffff, 10px 5px 15px 5px rgba(250, 249, 249, 0);
+
   .img-link{
-    
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
@@ -109,4 +109,16 @@
     50%{background-position:100% 23%}
     100%{background-position:0% 78%}
     
+  }
+
+
+  .img-container{
+    @media screen and (max-width:990px){
+    width: 200px;
+    height: 200px;
+  }
+    @media screen and (max-width:728px){
+    width: 100px;
+    height: 100px;
+  }
   }

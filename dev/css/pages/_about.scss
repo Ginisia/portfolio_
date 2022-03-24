@@ -1,37 +1,32 @@
-.page-about{
-  background: #212121;
-  .main{
-    height: auto;
-  }
-}
-.about-img{
-  width: 100%;
-  margin-top: 150px;
-  img{
-    display: block;
-    max-width: 80%;
-    border-radius: 1%;
-    margin: 0 auto;
-  }
-}
+.page-about .main {
 .about-text{
   display: flex;
-  justify-content: center;
-  font-size: 14px;
-  line-height: 30px;
+  width: 70%;
+  margin: 0 auto;
+
+  font-size: .8rem;
+  line-height: 2rem;
   word-spacing: 2px;
   font-weight: 400;
-  margin: 5% 0 10%;
 
-  .card-about{
-    h3{
-      text-transform: uppercase;
-    }
-    width: 40%;
-    text-align: left;
+  @media screen and (max-width:900px){
+    text-align: justify;
+    flex-direction: column;
+    justify-content: center;
   }
-  .about-marco{
-  width: 40%;
-  text-align: left;
+}
+
+.about-text .about-me{
+  line-height: 1.8rem;
+  @media screen and (max-width:990px){
+      width: 100%;
   }
+  button{
+    justify-self: center;
+  }
+}
+}
+.about-me .card-about{
+  margin-top: 3rem;
+  border-top: 1px dotted white;
 }

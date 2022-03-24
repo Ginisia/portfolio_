@@ -1,7 +1,6 @@
 /*BUTTONS*/
 .button {
   background: transparent;
-  margin: 20px 30px;
   text-decoration: none;
   letter-spacing: 1px;
   display: inline-block;
@@ -14,6 +13,13 @@
 .btn_white {
   border: 1px solid #fff;
   color: white;
+  &:hover{
+    transform: scale(1.1, 1.1);
+  }
+  
+  &:active{
+    transform: scale(1.05, 1.05);
+  }
 }
 
 .button-link{

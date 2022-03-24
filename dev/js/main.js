@@ -319,16 +319,3 @@ b.run();
 
 ///////////////////////////////////////
 
-////SIDE BAR////
-let myContact = document.querySelector('.contact-link');
-let contact = document.querySelector('.window-contact');
-let cross = document.querySelector('.cross-wind');
-
-myContact.addEventListener('click', function () {
-	contact.classList.toggle('active');
-});
-
-cross.addEventListener('click', function () {
-	contact.classList.toggle('active');
-});
-////

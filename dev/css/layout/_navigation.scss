@@ -2,20 +2,16 @@
   z-index: 22;
   position: fixed;
   left: 4%;
-  right: 4%;
-  top: 25px;
-  width: 92%;
+  top: 2rem;
+  width: 90%;
   display: flex;
+  align-items: center;
   font-size: 13px;
   letter-spacing: 1px;
-  @media screen and (max-width:990px){
-    left: unset;
-    right: unset;
-    top: 0;
-    width: 100%;
-    display: none;
-    background: #363636;
-  }
+      @media screen and (max-width:900px){
+      justify-content: center;;
+    }
+
   a:nth-of-type(1){
     font-size: 18px;
     margin-right: auto;
@@ -23,20 +19,28 @@
     span{
       font-weight: 200;
     }
+    @media screen and (max-width:900px){
+      display: none;
+    }
   }
   a+a {
   margin-left: 4%;
+  &:before{
+    font-family: FontAwesome;
+    content: "\f4d8 \00a0 \00a0";
+    display: none;
+    @media screen and (max-width:900px){
+      display: inline-block;
+    }
+  }
   }
   a+a:hover{
     text-shadow: 0 0 5px #ffffff;
   }
   
-  @media screen and (max-width:990px){
-    left: unset;
-    right: unset;
-    top: 0;
-    width: 100%;
-    display: none;
-    background: #363636;
-  }
 }
+
+
+
+
+

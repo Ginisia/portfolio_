@@ -1,8 +1,11 @@
 body{
     position: relative;
     background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center ;
     color: white;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     font-size: 14px;
 }
 
@@ -16,7 +19,7 @@ body{
 
 .wrapper {
     max-width: 80%;
-    margin: 0 auto;
+    margin: 10% auto;
 }
 
 a {
