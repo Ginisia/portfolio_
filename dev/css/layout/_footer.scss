@@ -1,8 +1,9 @@
 .footer {
+  background: rgba(255, 255, 255, 0.252);
+  width: 250px;
   position: fixed;
-  left: 4%;
-  right: 4%;
-  bottom: 25px;
+  bottom: 0;
+  padding: 1rem;
   display: flex;
   align-items: center;
   .nav-footer{
@@ -11,7 +12,7 @@
       margin-right: 30%;
       font-size: .8rem;
       &:hover{
-        text-shadow: 2px 2px 1em rgb(84, 104, 194);
+        text-shadow: 2px 2px 1em rgb(85, 179, 211);
       }
     }
   }

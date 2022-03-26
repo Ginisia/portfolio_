@@ -1,23 +1,23 @@
-.page-about .main {
-.about-text{
+.page-about .main{
+  min-height: 100%;
+  .wrapper{
   display: flex;
-  width: 70%;
-  margin: 0 auto;
-
-  font-size: .8rem;
-  line-height: 2rem;
-  word-spacing: 2px;
-  font-weight: 400;
-
-  @media screen and (max-width:900px){
-    text-align: justify;
-    flex-direction: column;
-    justify-content: center;
+  justify-content: center;
+  align-items: center;
   }
 }
 
+.about-text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: .8rem;
+  word-spacing: 2px;
+  font-weight: 400;
+}
+
 .about-text .about-me{
-  line-height: 1.8rem;
+  line-height: 1.5rem;
   @media screen and (max-width:990px){
       width: 100%;
   }
@@ -25,8 +25,7 @@
     justify-self: center;
   }
 }
-}
 .about-me .card-about{
-  margin-top: 3rem;
+  margin: 2rem 0 2rem;
   border-top: 1px dotted white;
 }
