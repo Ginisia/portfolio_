@@ -8,6 +8,7 @@
 }
 
 .about-text{
+  width: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,16 +17,17 @@
   font-weight: 400;
 }
 
-.about-text .about-me{
+.about-text {
   line-height: 1.5rem;
   @media screen and (max-width:990px){
-      width: 100%;
+      width: 90%;
   }
   button{
     justify-self: center;
   }
 }
 .about-me .card-about{
+  width: 50%;
   margin: 2rem 0 2rem;
   border-top: 1px dotted white;
 }
