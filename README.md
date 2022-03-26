@@ -15,5 +15,3 @@ Lien vers le site :  https://ginisia.github.io/portfolio_/prod/
 ## Responsive
 
 Oui.
-
-
