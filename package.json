@@ -19,13 +19,13 @@
 		"gulp-uglify": "^3.0.2",
 		"gulp-uglifycss": "^1.1.0",
 		"readable-stream": "^3.6.0",
-		"lodash.template": ">=4.5.0",
+		
 		"sass": "^1.47.0"
 	},
 	"dependencies": {
 		"gulp-minify-html": "^1.0.6",
 		"minimist": ">=1.2.6",
-		"lodash.template": ">=4.5.0",
+		
 		"glob-parent": ">=5.1.2",
 		"color-string": ">=1.5.5"
 	}
