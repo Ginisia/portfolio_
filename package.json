@@ -22,6 +22,8 @@
 		"sass": "^1.47.0"
 	},
 	"dependencies": {
-		"gulp-minify-html": "^1.0.6"
+		"gulp-minify-html": "^1.0.6",
+		"minimist": ">=1.2.6",
+		"lodash.template": ">=4.5.0"
 	}
 }
