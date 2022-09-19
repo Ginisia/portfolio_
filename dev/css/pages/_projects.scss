@@ -17,6 +17,7 @@
   grid-template-columns: 2fr 2fr;
   margin-bottom: 4rem;
   justify-items: center;
+
 }
 
 .img-container{
@@ -40,18 +41,22 @@
     right: 0;
   }
 }
-
 .project:nth-of-type(1) .img-container .img-link{
-  background-image: url(../img/travelista.jpg);
+  background-image: url(../img/bubble2.jpg);
   opacity: 0;
   &:hover{opacity: 1; transition: all .5s ease-in-out;}
 }
 .project:nth-of-type(2) .img-container .img-link{
-  background-image: url(../img/pato.jpg);
+  background-image: url(../img/travelista.jpg);
   opacity: 0;
   &:hover{opacity: 1; transition: all .5s ease-in-out;}
 }
 .project:nth-of-type(3) .img-container .img-link{
+  background-image: url(../img/pato.jpg);
+  opacity: 0;
+  &:hover{opacity: 1; transition: all .5s ease-in-out;}
+}
+.project:nth-of-type(4) .img-container .img-link{
   opacity: 0;
   &:hover{
     opacity: 1; 
@@ -64,30 +69,30 @@
     img{
       width: 80%;
       position: relative;
-      top: -15%;
-      right: -10%;
+      top: -20%;
+      left: -10%;
     }
   }
   
-  .project:nth-of-type(4) .img-container .img-link{
+  .project:nth-of-type(5) .img-container .img-link{
     background-image: url(../img/marco.jpeg);
     opacity: 0;
     &:hover{opacity: 1; transition: all .5s ease-in-out;}
   }
 
-  .project:nth-of-type(5) .img-container .img-link{
+  .project:nth-of-type(6) .img-container .img-link{
     background-image: url(../img/tremont.jpg);
     opacity: 0;
     &:hover{opacity: 1; transition: all .5s ease-in-out;}
   }
   
-  .project:nth-of-type(6) .img-container .img-link{
+  .project:nth-of-type(7) .img-container .img-link{
     background-image: url(../img/meteo.jpg);
     opacity: 0;
     &:hover{opacity: 1; transition: all .5s ease-in-out;}
   }
   
-  .project:nth-of-type(7) .img-container .img-link{
+  .project:nth-of-type(8) .img-container .img-link{
     background-image: url(../img/dino3.jpg);
     opacity: 0;
     &:hover{opacity: 1; transition: all .5s ease-in-out;}
