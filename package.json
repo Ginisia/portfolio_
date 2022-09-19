@@ -25,6 +25,7 @@
 	"dependencies": {
 		"gulp-minify-html": "^1.0.6",
 		"minimist": ">=1.2.6",
+		"lodash.template": ">=4.5.0",
 		"glob-parent": ">=5.1.2",
 		"color-string": ">=1.5.5"
 	}
